@@ -3,7 +3,7 @@ import Materiel from "./Materiel";
 import Chimique from "./Chimique";
 import Alimentaire from "./Alimentaire";
 
-class Aerienne extends Cargaison {
+export default class Aerienne extends Cargaison {
   public constructor(distance:number) {
     super(distance)
   }
@@ -23,13 +23,13 @@ class Aerienne extends Cargaison {
   ajouterProduit(produit: Chimique | Alimentaire | Materiel): void {
     if (this._produit.length >= 10) {
       throw new Error(
-        "Impossible d'ajouter : la cargaison routière est pleine."
+        "Impossible d'ajouter : la cargaison Aerienne est pleine."
       );
     }
 
     if (produit instanceof Chimique) {
       throw new Error(
-        "Les produits chimiques sont interdits en cargaison routière."
+        "Les produits chimiques sont interdits en cargaison aeriennes."
       );
     }
 

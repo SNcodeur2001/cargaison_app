@@ -19,4 +19,8 @@ export default class Chimique extends Produit {
     }
     this._toxicite = value;
   }
+
+  public info(): void {
+    console.log(`Produit Chimique - Libellé: ${this.libelle}, Poids: ${this.poids}kg, Toxicité: ${this.toxicite}/10`);
+}
 }
